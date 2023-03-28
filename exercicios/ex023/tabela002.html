@@ -12,7 +12,8 @@
         }
         table{
            width: 500px;  
-           border-collapse: collapse;          
+           border-collapse: collapse;
+           position: relative;  /* TEM QUE ESTAR NA POSIÇÃO RALTIVA PARA FAZER O CABEÇALHO DA TABELA FICAR FIXA---*/        
         }      
         td, th{
             border: 1px solid black;
@@ -23,6 +24,11 @@
             font-weight: bold;
             padding: 10px;
             background-color: gray;
+        }
+        thead > tr > th{  /* --- ABA FIXA---*/
+            position: sticky;
+            top: -1px;
+            background-color:gray ;
         }
         tbody > tr:nth-child(2n){
             background-color: lightgray;
